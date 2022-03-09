@@ -8,8 +8,8 @@
 - name: Build an image and push
   community.docker.docker_image:
     build:
-      path: ./files
-    name: simple_web/apache
+      path: ./files/
+    name: simple_web
     tag: v1
     source: local
   become: yes
