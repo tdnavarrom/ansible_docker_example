@@ -1,7 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine:latest
 
-RUN apt-get update \
-    && apt-get install -y apache2 \
+RUN apk add --no-cache apache2 \
     && echo "Hello from the EC2 instance $(hostname -f)." > /var/www/html/index.html
 
 
