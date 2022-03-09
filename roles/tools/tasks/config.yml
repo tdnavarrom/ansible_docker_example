@@ -11,13 +11,15 @@
       path: ./files
     name: simple_web/apache
     tag: v1
+    source: local
   become: yes
 
-- name: Build an image and push
+- name: Create container
   community.docker.docker_container:
     name: mywebapp
     image: simple_web/apache
     state: present
+    source: 
     exposed_ports:
       - 80
       - 443
