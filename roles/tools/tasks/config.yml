@@ -19,7 +19,6 @@
     name: mywebapp
     image: simple_web
     state: present
-    source: 
     exposed_ports:
       - 80
       - 443
