@@ -8,8 +8,7 @@
 - name: Build an image and push
   community.docker.docker_image:
     build:
-      path: files
-      dockerfile: files/dockerfile
+      path: roles/tools/files
     name: simple_web
     tag: v1
     source: build
@@ -18,7 +17,7 @@
 - name: Create container
   community.docker.docker_container:
     name: mywebapp
-    image: simple_web/apache
+    image: simple_web
     state: present
     source: 
     exposed_ports:
