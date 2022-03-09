@@ -1,0 +1,25 @@
+---
+- name: Start docker service
+  service:
+    name: docker
+    state: started
+  become: yes
+
+- name: Build an image and push
+  community.docker.docker_image:
+    build:
+      path: ./files
+    name: simple_web/apache
+    tag: v1
+  become: yes
+
+- name: Build an image and push
+  community.docker.docker_container:
+    name: mywebapp
+    image: simple_web/apache
+    state: present
+    exposed_ports:
+      - 80
+      - 443
+    volumes_from:
+      - mydata
