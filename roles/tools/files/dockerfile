@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk add --no-cache apache2 \
-    && echo "Hello from the EC2 instance $(hostname -f)." > /var/www/html/index.html
+    && echo "Hello from the EC2 instance $(hostname -f)." > /var/www/localhost/htdocs/index.html
 
 
 EXPOSE 80
