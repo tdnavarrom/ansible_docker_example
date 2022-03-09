@@ -1,6 +1,6 @@
 ---
 - name: personal
-  hosts: all
+  hosts: localhost
   remote_user: ubuntu
   become: yes
   
