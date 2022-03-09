@@ -11,7 +11,7 @@
       path: ./files/
     name: simple_web
     tag: v1
-    source: local
+    source: build
   become: yes
 
 - name: Create container
