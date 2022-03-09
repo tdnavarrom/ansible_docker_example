@@ -8,7 +8,7 @@
 - name: Build an image and push
   community.docker.docker_image:
     build:
-      path: ./roles/tools/files
+      path: /home/ubuntu/ansible_docker_example/roles/tools/files
     name: simple_web
     tag: v1
     source: build
