@@ -10,7 +10,6 @@
     build:
       path: /home/ubuntu/ansible_docker_example/roles/tools/files
     name: simple_web
-    tag: v1
     source: build
   become: yes
 
