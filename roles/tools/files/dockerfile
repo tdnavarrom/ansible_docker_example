@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache apache2 \
+RUN apk add --no-cache apache2 openrc\
     && echo "Hello from the EC2 instance $(hostname -f)." > /var/www/localhost/htdocs/index.html
 RUN rc-service apache2 start
 RUN rc-update add apache2
