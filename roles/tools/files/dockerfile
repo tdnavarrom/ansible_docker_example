@@ -3,7 +3,8 @@ FROM alpine:latest
 RUN apk add --no-cache apache2 openrc\
     && echo "Hello from the EC2 instance $(hostname -f)." > /var/www/localhost/htdocs/index.html
 
-RUN rc-update add apache2
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
 EXPOSE 80
 EXPOSE 443
