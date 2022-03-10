@@ -17,7 +17,7 @@
   community.docker.docker_container:
     name: mywebapp
     image: simple_web
-    state: present
+    state: started
     exposed_ports:
       - 80
       - 443
