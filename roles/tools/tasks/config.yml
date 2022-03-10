@@ -18,7 +18,7 @@
     name: mywebapp
     image: simple_web
     state: started
-    exposed_ports:
-      - 80
-      - 443
+    ports:
+      - "80:80"
+      - "443:443"
   become: yes
